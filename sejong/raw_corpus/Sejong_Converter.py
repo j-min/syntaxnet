@@ -116,7 +116,7 @@ for file_counter, rawfile in enumerate(sejonglist):
                     writefile.write(line)
                     first_line = False
 
-        print(file_counter+1, OUT_FILENAME)
+        print(file_counter+1, OUT_FILENAME, "from", rawfile)
 
 stripped_sejonglist = allfiles(os.getcwd()+"/stripped")
 # stripped_sejonglist = [file for file in strippedfilelist if "stripped" in file]
@@ -161,7 +161,7 @@ for file_counter, convertedfile in enumerate(converted_sejonglist):
     print(file_counter+1, convertedfile)
 
     with codecs.open(convertedfile, 'r', encoding = 'utf-8') as readfile:
-        OUT_FILENAME = "sejong_treebank.txt.v1"
+        OUT_FILENAME = "../sejong_treebank.txt.v1"
         with codecs.open(OUT_FILENAME, "a", "utf-8") as writefile:
             data = readfile.read()
             writefile.write(data)
