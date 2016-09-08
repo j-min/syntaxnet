@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*- 
+
 """
 Sejong_Corpus Converter
 Jaemin Cho/j-min
