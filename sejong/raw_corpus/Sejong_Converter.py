@@ -135,7 +135,7 @@ for file_counter, strippedfile in enumerate(stripped_sejonglist):
             line_counter = 1
 
             for line in readfile:
-                if 'Q="' in line:
+                if ('Q="' in line) or ('/Q'in line):
                     error_sentence = True
                     buffer = ""
                     # print(line_counter, line)
