@@ -1,0 +1,8 @@
+Parameters: 512,512-0.02-100-0.9 | Steps: 200 | Tuning score: 93.87% | Best tuning score: 93.87%
+Parameters: 512,512-0.02-100-0.9 | Steps: 400 | Tuning score: 94.19% | Best tuning score: 94.19%
+Parameters: 512,512-0.02-100-0.9 | Steps: 600 | Tuning score: 94.25% | Best tuning score: 94.25%
+Parameters: 512,512-0.02-100-0.9 | Steps: 800 | Tuning score: 94.28% | Best tuning score: 94.28%
+Parameters: 512,512-0.02-100-0.9 | Steps: 1000 | Tuning score: 94.35% | Best tuning score: 94.35%
+Parameters: 512,512-0.02-100-0.9 | Steps: 1200 | Tuning score: 94.30% | Best tuning score: 94.35%
+Parameters: 512,512-0.02-100-0.9 | Steps: 1400 | Tuning score: 94.20% | Best tuning score: 94.35%
+Parameters: 512,512-0.02-100-0.9 | Steps: 1600 | Tuning score: 94.24% | Best tuning score: 94.35%

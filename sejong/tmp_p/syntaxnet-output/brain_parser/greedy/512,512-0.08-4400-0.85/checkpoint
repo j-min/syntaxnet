@@ -1,0 +1,3 @@
+model_checkpoint_path: "/home/heythisischo/models/syntaxnet/work/sejong/tmp_p/syntaxnet-output/brain_parser/greedy/512,512-0.08-4400-0.85/latest-model"
+all_model_checkpoint_paths: "/home/heythisischo/models/syntaxnet/work/sejong/tmp_p/syntaxnet-output/brain_parser/greedy/512,512-0.08-4400-0.85/model"
+all_model_checkpoint_paths: "/home/heythisischo/models/syntaxnet/work/sejong/tmp_p/syntaxnet-output/brain_parser/greedy/512,512-0.08-4400-0.85/latest-model"
