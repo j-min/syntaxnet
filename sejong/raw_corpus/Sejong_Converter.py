@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*- 
-
 """
 Sejong_Corpus Converter
 Jaemin Cho/j-min
@@ -22,9 +21,7 @@ Jaemin Cho/j-min
 <teiHeader>
 	<fileDesc>
 		<titleStmt>
-			<title>하늘에 뜬 돌도끼, 형태소 분석 전자파일</title>
-			<author>손동인</author>
-			<sponsor>대한민국 문화관광부</sponsor>
+			<title>하늘여 돌도끼, 형태소 분석 전�민국 문화관광부</sponsor>
 			<respStmt>
 				<resp>문헌입력, 표준화, 형태소 정보 부착</resp>
 				<name>고려대학교 민족문화연구원</name>
@@ -32,12 +29,11 @@ Jaemin Cho/j-min
 		</titleStmt>
 		<extent>22,790어절, 3,346문장</extent>
 		<publicationStmt>
-			<distributor>국립국어연구원</distributor>
-			<idno>BGGO0098.txt, 형태분석: BTGO0098.txt, 원본:BRGO0098.txt</idno>
+			<distributor>국립국어연구�분석: BTGO0098.txt, 원본:BRGO0098.txt</idno>
 			<availability>배포 불가</availability>
 		</publicationStmt>
 		<notesStmt>
-			<note>균형말뭉치에서 선정</note>
+			<note>균형� 선정</note>
 		</notesStmt>
 		<sourceDesc>
 			<bibl>
@@ -52,7 +48,7 @@ Jaemin Cho/j-min
 (S 	(NP_SBJ 나/NP + 는/JX)
 	(VNP 돈/NNG + 이/VCP + 다/EF + ./SF))
 
-; 만 원이라는 이름을 붙인 채, 이제 막 태어났다.
+; 만 � 막 태어났다.
 (VP 	(NP_AJT 	(VP_MOD 	(NP_OBJ 	(VNP_MOD 	(NP 만/NR)
 					(VNP_MOD 원/NNB + 이/VCP + 라는/ETM))
 				(NP_OBJ 이름/NNG + 을/JKO))
@@ -103,7 +99,7 @@ sejonglist = [file for file in allfilelist if "BG" in file]
 for file_counter, rawfile in enumerate(sejonglist):
 
     with codecs.open(rawfile, "r", encoding = "utf-16") as readfile:
-        OUT_FILENAME = os.getcwd()+"/stripped/stripped"+str(file_counter+1)
+        OUT_FILENAME = os.getcwd()+"/stripped/"+rawfile[-12:-4]+"_stripped.txt"
         first_line = True
 
         with codecs.open(OUT_FILENAME, "w", "utf-8") as writefile:
@@ -122,23 +118,26 @@ for file_counter, rawfile in enumerate(sejonglist):
 
 stripped_sejonglist = allfiles(os.getcwd()+"/stripped")
 # stripped_sejonglist = [file for file in strippedfilelist if "stripped" in file]
-# print(stripped_sejonglist)
+print(stripped_sejonglist)
+
+error_string = ["Q1", "Q2", "Q3", 'Q4', 'Q5', 'Q6', 'Q=', '(Q', '; Q', '/Q', '/U', '/W', '/Y', '/Z']
 
 for file_counter, strippedfile in enumerate(stripped_sejonglist):
-    with codecs.open(strippedfile, 'r', encoding = 'utf-8') as readfile:
-        OUT_FILENAME = os.getcwd()+"/converted/converted"+str(file_counter+1)
+    with codecs.open(strippedfile, 'r') as readfile:
+        OUT_FILENAME = os.getcwd()+"/converted/"+strippedfile[-21:-13]+"_converted.txt"
         error_sentence = False
         buffer = ""
 
-        with codecs.open(OUT_FILENAME, "w", "utf-8") as writefile:
+        with codecs.open(OUT_FILENAME, "w") as writefile:
             error_counter = 0
             line_counter = 1
 
             for line in readfile:
-                if ('Q="' in line) or ('/Q'in line):
-                    error_sentence = True
-                    buffer = ""
-                    # print(line_counter, line)
+                for x in error_string:
+                    if x in line:
+                        error_sentence = True
+                        buffer = ""
+                        # print(line_counter, line)
 
                 if "\n" == line:
                     if error_sentence == False:
@@ -156,8 +155,7 @@ for file_counter, strippedfile in enumerate(stripped_sejonglist):
         print(file_counter+1, OUT_FILENAME, "from", strippedfile, "| error counts: ", error_counter)
 
 converted_sejonglist = allfiles(os.getcwd()+"/converted")
-# stripped_sejonglist = [file for file in strippedfilelist if "stripped" in file]
-# print(converted_sejonglist)
+print(converted_sejonglist)
 
 for file_counter, convertedfile in enumerate(converted_sejonglist):
     print(file_counter+1, convertedfile)
