@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 """
 Sejong_Corpus Converter
 Jaemin Cho/j-min
@@ -21,7 +21,9 @@ Jaemin Cho/j-min
 <teiHeader>
 	<fileDesc>
 		<titleStmt>
-			<title>하늘여 돌도끼, 형태소 분석 전�민국 문화관광부</sponsor>
+			<title>하늘에 뜬 돌도끼, 형태소 분석 전자파일</title>
+			<author>손동인</author>
+			<sponsor>대한민국 문화관광부</sponsor>
 			<respStmt>
 				<resp>문헌입력, 표준화, 형태소 정보 부착</resp>
 				<name>고려대학교 민족문화연구원</name>
@@ -29,11 +31,12 @@ Jaemin Cho/j-min
 		</titleStmt>
 		<extent>22,790어절, 3,346문장</extent>
 		<publicationStmt>
-			<distributor>국립국어연구�분석: BTGO0098.txt, 원본:BRGO0098.txt</idno>
+			<distributor>국립국어연구원</distributor>
+			<idno>BGGO0098.txt, 형태분석: BTGO0098.txt, 원본:BRGO0098.txt</idno>
 			<availability>배포 불가</availability>
 		</publicationStmt>
 		<notesStmt>
-			<note>균형� 선정</note>
+			<note>균형말뭉치에서 선정</note>
 		</notesStmt>
 		<sourceDesc>
 			<bibl>
@@ -48,7 +51,7 @@ Jaemin Cho/j-min
 (S 	(NP_SBJ 나/NP + 는/JX)
 	(VNP 돈/NNG + 이/VCP + 다/EF + ./SF))
 
-; 만 � 막 태어났다.
+; 만 원이라는 이름을 붙인 채, 이제 막 태어났다.
 (VP 	(NP_AJT 	(VP_MOD 	(NP_OBJ 	(VNP_MOD 	(NP 만/NR)
 					(VNP_MOD 원/NNB + 이/VCP + 라는/ETM))
 				(NP_OBJ 이름/NNG + 을/JKO))

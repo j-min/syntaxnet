@@ -1,0 +1,27 @@
+1	얼음	얼음	NNG	NNG	_	2	NP	_	_
+2	대신	대신	NNG	NNG	_	3	NP_AJT	_	_
+3	쓰는	쓰	VV	VV+ETM	_	4	VP_MOD	_	_
+4	아이스팩도	아이스팩	NNG	NNG+JX	_	5	NP_SBJ	_	_
+5	필수품이다.	필수품	NNG	NNG+VCP+EF+SF	_	0	VNP	_	_
+
+1	얼음은	얼음	NNG	NNG+JX	_	5	NP_SBJ	_	_
+2	녹으면서	녹	VV	VV+EC	_	4	VP	_	_
+3	물이	물	NNG	NNG+JKS	_	4	NP_SBJ	_	_
+4	생겨	생기	VV	VV+EC	_	5	VP	_	_
+5	지저분해지는데	지저분	XR	XR+XSA+EC+VX+EC	_	6	VP_AJT	_	_
+6	비해	비	NNG	NNG+XSV+EC	_	18	VP	_	_
+7	아이스팩은	아이스팩	NNG	NNG+JX	_	18	NP_SBJ	_	_
+8	플라스틱	플라스틱	NNG	NNG	_	9	NP	_	_
+9	통	통	NNG	NNG	_	10	NP	_	_
+10	안에	안	NNG	NNG+JKB	_	11	NP_AJT	_	_
+11	든	들	VV	VV+ETM	_	12	VP_MOD	_	_
+12	내용물이	내용물	NNG	NNG+JKS	_	14	NP_SBJ	_	_
+13	얼었다	얼	VV	VV+EP+EC	_	14	VP	_	_
+14	녹았다해서	녹	VV	VV+EP+EC+VX+EC	_	16	VP	_	_
+15	훨씬	훨씬	MAG	MAG	_	16	AP	_	_
+16	깨끗하며	깨끗	XR	XR+XSA+EC	_	18	VP	_	_
+17	반영구적으로	반	NNG	NNG+NNG+XSN+JKB	_	18	NP_AJT	_	_
+18	쓸	쓰	VV	VV+ETM	_	19	VP_MOD	_	_
+19	수	수	NNB	NNB	_	20	NP_SBJ	_	_
+20	있다.	있	VV	VV+EF+SF	_	0	VP	_	_
+

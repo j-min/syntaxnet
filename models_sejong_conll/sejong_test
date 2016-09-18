@@ -1,0 +1,72 @@
+1	프랑스의	프랑스	NNP	NNP+JKG	_	4	NP_MOD	_	_
+2	세계적인	세계	NNG	NNG+XSN+VCP+ETM	_	4	VNP_MOD	_	_
+3	의상	의상	NNG	NNG	_	4	NP	_	_
+4	디자이너	디자이너	NNG	NNG	_	6	NP	_	_
+5	엠마누엘	엠마누엘	NNP	NNP	_	6	NP	_	_
+6	웅가로가	웅가로	NNP	NNP+JKS	_	11	NP_SBJ	_	_
+7	실내	실내	NNG	NNG	_	8	NP	_	_
+8	장식용	장식	NNG	NNG+XSN	_	9	NP	_	_
+9	직물	직물	NNG	NNG	_	10	NP	_	_
+10	디자이너로	디자이너	NNG	NNG+JKB	_	11	NP_AJT	_	_
+11	나섰다.	나서	VV	VV+EP+EF+SF	_	0	VP	_	_
+
+1	안방서	안방	NNG	NNG+JKB	_	2	NP_AJT	_	_
+2	더위식힌다	더위	NNG	NNG+VV+EC	_	0	VP	_	_
+
+1	플라스틱으로	플라스틱	NNG	NNG+JKB	_	2	NP_AJT	_	_
+2	만든	만들	VV	VV+ETM	_	3	VP_MOD	_	_
+3	샤베트기는	샤베트기	NNG	NNG+JX	_	5	NP_SBJ	_	_
+4	수입품이	수입품	NNG	NNG+JKS	_	5	NP_SBJ	_	_
+5	대부분이다.	대부분	NNG	NNG+VCP+EF+SF	_	0	VNP	_	_
+
+1	일반	일반	NNG	NNG	_	2	NP	_	_
+2	아동용	아동	NNG	NNG+XSN	_	3	NP	_	_
+3	4천원선…	4	SN	SN+NR+NNG+NNG+SE	_	0	NP	_	_
+
+1	따라서	따라서	MAJ	MAJ	_	17	AP	_	_
+2	물안경을	물안경	NNG	NNG+JKO	_	3	NP_OBJ	_	_
+3	살	사	VV	VV+ETM	_	4	VP_MOD	_	_
+4	때는	때	NNG	NNG+JX	_	15	NP_AJT	_	_
+5	직접	직접	MAG	MAG	_	6	AP	_	_
+6	쓰고	쓰	VV	VV+EC	_	8	VP	_	_
+7	걸음을	걸음	NNG	NNG+JKO	_	8	NP_OBJ	_	_
+8	걸어	걷	VV	VV+EC	_	15	VP	_	_
+9	어지럽지	어지럽	VA	VA+EC	_	10	VP	_	_
+10	않은지,	않	VX	VX+EC+SP	_	14	VP	_	_
+11	사물이	사물	NNG	NNG+JKS	_	13	NP_SBJ	_	_
+12	제대로	제대로	MAG	MAG	_	13	AP	_	_
+13	보이는	보이	VV	VV+ETM	_	14	VP_MOD	_	_
+14	지를	지	NNB	NNB+JKO	_	15	NP_OBJ	_	_
+15	확인하는	확인	NNG	NNG+XSV+ETM	_	16	VP_MOD	_	_
+16	게	것	NNB	NNB+JKS	_	17	NP_SBJ	_	_
+17	중요하다.	중요	NNG	NNG+XSA+EF+SF	_	0	VP	_	_
+
+1	한	한	MM	MM	_	2	DP	_	_
+2	자리에서	자리	NNG	NNG+JKB	_	3	NP_AJT	_	_
+3	소개하는	소개	NNG	NNG+XSV+ETM	_	5	VP_MOD	_	_
+4	관광	관광	NNG	NNG	_	5	NP	_	_
+5	교역전이	교역전	NNG	NNG+JKS	_	10	NP_SBJ	_	_
+6	10일	10	SN	SN+NNB	_	10	NP_AJT	_	_
+7	서울	서울	NNP	NNP	_	8	NP	_	_
+8	종합전시장(KOEX)	종합	NNG	NNG+NNG+SS+SL+SS	_	9	NP	_	_
+9	대서양관에서	대서양관	NNG	NNG+JKB	_	10	NP_AJT	_	_
+10	개막됐다.	개막	NNG	NNG+XSV+EP+EF+SF	_	0	VP	_	_
+
+1	우선	우선	MAG	MAG	_	16	AP	_	_
+2	국내	국내	NNG	NNG	_	3	NP	_	_
+3	참가가	참가	NNG	NNG+JKS	_	5	NP_SBJ	_	_
+4	너무	너무	MAG	MAG	_	5	AP	_	_
+5	적고	적	VA	VA+EC	_	13	VP	_	_
+6	지방	지방	NNG	NNG	_	8	NP	_	_
+7	자치	자치	NNG	NNG	_	8	NP	_	_
+8	단체들의	단체	NNG	NNG+XSN+JKG	_	9	NP_MOD	_	_
+9	관심이	관심	NNG	NNG+JKS	_	13	NP_SBJ	_	_
+10	외국에	외국	NNG	NNG+JKB	_	11	NP_AJT	_	_
+11	비해	비	NNG	NNG+XSV+EC	_	13	VP	_	_
+12	훨씬	훨씬	MAG	MAG	_	13	AP	_	_
+13	떨어지는	떨어지	VV	VV+ETM	_	14	VP_MOD	_	_
+14	것이	것	NNB	NNB+JKS	_	16	NP_SBJ	_	_
+15	주원인으로	주원인	NNG	NNG+JKB	_	16	NP_AJT	_	_
+16	지적되고	지적	NNG	NNG+XSV+EC	_	17	VP	_	_
+17	있다.	있	VX	VX+EF+SF	_	0	VP	_	_
+
