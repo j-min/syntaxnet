@@ -260,7 +260,7 @@ function copy_model {
 	cp -rf ${TMP_DIR}/brain_pos/greedy/${POS_PARAMS}/tag-to-category ${MODEL_DIR}/
 }
 
-convert_corpus ${CORPUS_DIR}
+# convert_corpus ${CORPUS_DIR}
 train_pos_tagger
 preprocess_with_tagger
 pretrain_parser
