@@ -28,7 +28,7 @@ ${PARSER_EVAL} \
   --hidden_layer_sizes=${POS_HIDDEN_LAYER_SIZES} \
   --arg_prefix=brain_pos \
   --graph_builder=greedy \
-  --task_context=${MODEL_DIR}/context.pbtxt \
+  --task_context=${MODEL_DIR}/test_context.pbtxt \
   --resource_dir=${MODEL_DIR} \
   --model_path=${MODEL_DIR}/tagger-params \
   --slim_model \
@@ -41,7 +41,7 @@ ${PARSER_EVAL} \
   --hidden_layer_sizes=${PARSER_HIDDEN_LAYER_SIZES} \
   --arg_prefix=brain_parser \
   --graph_builder=structured \
-  --task_context=${MODEL_DIR}/context.pbtxt \
+  --task_context=${MODEL_DIR}/test_context.pbtxt \
   --resource_dir=${MODEL_DIR} \
   --model_path=${MODEL_DIR}/parser-params \
   --slim_model \
