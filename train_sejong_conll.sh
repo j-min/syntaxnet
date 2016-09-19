@@ -127,12 +127,12 @@ PARSER_HIDDEN_LAYER_PARAMS='512x512'
 BATCH_SIZE=256
 BEAM_SIZE=16
 
-# function convert_corpus {
-# 	corpus_dir=$1
-# 	for corpus in $(ls ${corpus_dir}/*.conllu); do
-# 		${python} ${CDIR}/convert.py < ${corpus} > ${corpus}.conv
-# 	done
-# }
+function convert_corpus {
+	corpus_dir=$1
+	for corpus in $(ls ${corpus_dir}/*.conllu); do
+		${python} ${CDIR}/convert.py < ${corpus} > ${corpus}.conv
+	done
+}
 
 POS_PARAMS=${POS_HIDDEN_LAYER_PARAMS}-0.08-3600-0.9-0
 function train_pos_tagger {
@@ -260,7 +260,7 @@ function copy_model {
 	cp -rf ${TMP_DIR}/brain_pos/greedy/${POS_PARAMS}/tag-to-category ${MODEL_DIR}/
 }
 
-# convert_corpus ${CORPUS_DIR}
+convert_corpus ${CORPUS_DIR}
 train_pos_tagger
 preprocess_with_tagger
 pretrain_parser
