@@ -7,12 +7,16 @@ Parameter {
   value: 'words;tags;labels'
 }
 Parameter {
+  name: 'brain_parser_scoring'
+  value: 'default'
+}
+Parameter {
   name: 'brain_parser_features'
   value: 'input.word input(1).word input(2).word input(3).word stack.word stack(1).word stack(2).word stack(3).word stack.child(1).word stack.child(1).sibling(-1).word stack.child(-1).word stack.child(-1).sibling(1).word stack(1).child(1).word stack(1).child(1).sibling(-1).word stack(1).child(-1).word stack(1).child(-1).sibling(1).word stack.child(2).word stack.child(-2).word stack(1).child(2).word stack(1).child(-2).word;input.tag input(1).tag input(2).tag input(3).tag stack.tag stack(1).tag stack(2).tag stack(3).tag stack.child(1).tag stack.child(1).sibling(-1).tag stack.child(-1).tag stack.child(-1).sibling(1).tag stack(1).child(1).tag stack(1).child(1).sibling(-1).tag stack(1).child(-1).tag stack(1).child(-1).sibling(1).tag stack.child(2).tag stack.child(-2).tag stack(1).child(2).tag stack(1).child(-2).tag;stack.child(1).label stack.child(1).sibling(-1).label stack.child(-1).label stack.child(-1).sibling(1).label stack(1).child(1).label stack(1).child(1).sibling(-1).label stack(1).child(-1).label stack(1).child(-1).sibling(1).label stack.child(2).label stack.child(-2).label stack(1).child(2).label stack(1).child(-2).label'
 }
 Parameter {
-  name: 'brain_parser_scoring'
-  value: 'default'
+  name: "brain_parser_transition_system"
+  value: "arc-standard"
 }
 
 Parameter {
@@ -33,112 +37,52 @@ Parameter {
 }
 
 input {
-  name: 'training-corpus'
-  record_format: 'conll-sentence'
+  name: "tag-map"
   Part {
-    file_pattern: 'work/models_sejong_conll/sejong_training.conllu.conv'
+    file_pattern: "tag-map"
   }
 }
 input {
-  name: 'tuning-corpus'
-  record_format: 'conll-sentence'
+  name: "word-map"
   Part {
-    file_pattern: 'work/models_sejong_conll/sejong_tuning.conllu.conv'
+    file_pattern: "word-map"
   }
 }
 input {
-  name: 'test-corpus'
-  record_format: 'conll-sentence'
+  name: "label-map"
   Part {
-    file_pattern: 'work/models_sejong_conll/sejong_test.conllu.conv'
+    file_pattern: "label-map"
   }
 }
 input {
-  name: 'tagged-training-corpus'
-  creator: 'brain_pos/greedy'
-  record_format: 'conll-sentence'
+  name: "lcword-map"
+  Part {
+    file_pattern: "lcword-map"
+  }
 }
 input {
-  name: 'tagged-tuning-corpus'
-  creator: 'brain_pos/greedy'
-  record_format: 'conll-sentence'
+  name: "category-map"
+  Part {
+    file_pattern: "category-map"
+  }
 }
 input {
-  name: 'tagged-test-corpus'
-  creator: 'brain_pos/greedy'
-  record_format: 'conll-sentence'
-}
-
-input {
-  name: 'char-map'
-  creator: 'brain_pos/greedy'
+  name: "prefix-table"
+  Part {
+    file_pattern: "prefix-table"
+  }
 }
 input {
-  name: 'label-map'
-  creator: 'brain_pos/greedy'
+  name: "suffix-table"
+  Part {
+    file_pattern: "suffix-table"
+  }
 }
 input {
-  name: 'word-map'
-  creator: 'brain_pos/greedy'
-}
-input {
-  name: 'lcword-map'
-  creator: 'brain_pos/greedy'
-}
-input {
-  name: 'tag-map'
-  creator: 'brain_pos/greedy'
-}
-input {
-  name: 'category-map'
-  creator: 'brain_pos/greedy'
-}
-input {
-  name: 'prefix-table'
-  creator: 'brain_pos/greedy'
-}
-input {
-  name: 'suffix-table'
-  creator: 'brain_pos/greedy'
-}
-input {
-  name: 'tag-to-category'
-  creator: 'brain_pos/greedy'
-}
-input {
-  name: 'projectivized-training-corpus'
-  creator: 'brain_parser/greedy'
-  record_format: 'conll-sentence'
-}
-input {
-  name: 'parsed-training-corpus'
-  creator: 'brain_parser/greedy'
-  record_format: 'conll-sentence'
-}
-input {
-  name: 'parsed-tuning-corpus'
-  creator: 'brain_parser/greedy'
-  record_format: 'conll-sentence'
-}
-input {
-  name: 'parsed-test-corpus'
-  creator: 'brain_parser/greedy'
-  record_format: 'conll-sentence'
-}
-input {
-  name: 'beam-parsed-training-corpus'
-  creator: 'brain_parser/structured'
-  record_format: 'conll-sentence'
-}
-input {
-  name: 'beam-parsed-tuning-corpus'
-  creator: 'brain_parser/structured'
-  record_format: 'conll-sentence'
-}
-input {
-  name: 'beam-parsed-test-corpus'
-  creator: 'brain_parser/structured'
-  record_format: 'conll-sentence'
+  name: "tag-to-category"
+  Part {
+    file_pattern: "tag-to-category"
+  }
 }
 input {
   name: 'stdin'
