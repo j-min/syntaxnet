@@ -113,7 +113,11 @@ for corpus_type in corpus_list:
                     print_dict['DEPS'] = '_'
                     print_dict['MISC'] = '_'
                     
-                    line_to_write = str(print_dict['ID']) + '\t' + str(print_dict['FORM']) +                                     '\t' + str(print_dict['LEMMA']) + '\t' + str(print_dict['UPOSTAG']) +                                     '\t' + str(print_dict['XPOSTAG']) + '\t' + str(print_dict['FEATS']) +                                     '\t' + str(print_dict['HEAD']) + '\t' + str(print_dict['DEPREL']) +                                     '\t' + str(print_dict['DEPS']) + '\t' + str(print_dict['MISC']) + '\n'
+                    line_to_write = str(print_dict['ID']) + '\t' + str(print_dict['FORM']) +|
+                        '\t' + str(print_dict['LEMMA']) + '\t' + str(print_dict['UPOSTAG']) +|
+                        '\t' + str(print_dict['XPOSTAG']) + '\t' + str(print_dict['FEATS']) +|
+                        '\t' + str(print_dict['HEAD']) + '\t' + str(print_dict['DEPREL']) +|
+                        '\t' + str(print_dict['DEPS']) + '\t' + str(print_dict['MISC']) + '\n'
                             
                     #print(line_to_write)
                     #break

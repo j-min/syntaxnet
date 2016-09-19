@@ -123,7 +123,7 @@ stripped_sejonglist = allfiles(os.getcwd()+"/stripped")
 # stripped_sejonglist = [file for file in strippedfilelist if "stripped" in file]
 print(stripped_sejonglist)
 
-error_string = ["Q1", "Q2", "Q3", 'Q4', 'Q5', 'Q6', 'Q=', '(Q', '; Q', '/Q', '/U', '/W', '/Y', '/Z']
+error_string = ["Q1", "Q2", "Q3", 'Q4', 'Q5', 'Q6', 'Q=', '(Q', '; Q', '/Q', '/U', '/W', '/Y', '/Z', '(L', '(R']
 
 for file_counter, strippedfile in enumerate(stripped_sejonglist):
     with codecs.open(strippedfile, 'r') as readfile:
