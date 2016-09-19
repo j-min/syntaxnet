@@ -117,7 +117,7 @@ CORPUS_DIR=${CDIR}/models_sejong_conll
 
 CONTEXT=${CORPUS_DIR}/context.pbtxt
 TMP_DIR=${CORPUS_DIR}/tmp/syntaxnet-output
-MODEL_DIR=${CDIR}/models
+MODEL_DIR=${CDIR}/models_sejong_conll
 
 POS_HIDDEN_LAYER_SIZES=64
 POS_HIDDEN_LAYER_PARAMS=64
