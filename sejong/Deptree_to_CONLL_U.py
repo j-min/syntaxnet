@@ -124,36 +124,41 @@ for corpus_type in corpus_list:
                     """
                     compressed_bucket, num_lemma = compress_eoj(bucket[1], bucket[2])
                     #print("compressed_bucket: ", compressed_bucket)
-                    
-                    Lemma_POS = re.split(' \+ ', compressed_bucket)
-                    #POS_Lemma = re.split('[ +]+', bucket[2])
-                    
-                    #print("Lemma_POS: "+str(Lemma_POS))
-                    #print("Line: ", line_counter, Lemma_POS)
-                    
-                    POS_match = []
-                    Lemma_match = []
-                    for Lemma_POS_x in Lemma_POS:
-                        #print("Lemma_POS_x: ", Lemma_POS_x)
-                        
-                        #"""
-                        try:
-                            temp_POS = re.findall('(\/[A-Z_+]+)', Lemma_POS_x)[0]
-                            matched_POS = temp_POS[1:]
-                            # findall은 리스트로 리턴하기 때문에 [0]
-                            # 맨 앞의 / 는 제외하려고 [1:]
-                            #print("matched_POS: ", matched_POS)
-                        except IndexError as e:
-                            print(e, "\n", "Line ", line_counter, " contains errors at")
-                            print(Lemma_POS, line)
-                            error_sentence = True
 
+                    if compressed_bucket == ' + /SW':
+                        POS_math = ['SW']
+                        Lemma_match = [' + ']
+                    else:
+                        Lemma_POS = re.split(' \+ ', compressed_bucket)
+                        #POS_Lemma = re.split('[ +]+', bucket[2])
+                        #print("Lemma_POS: "+str(Lemma_POS))
+                        #print("Line: ", line_counter, Lemma_POS)
 
-                        matched_Lemma = Lemma_POS_x.replace(temp_POS, '')
-                        #print("matched_Lemma: ", matched_Lemma)
-                        
-                        POS_match.append(matched_POS)
-                        Lemma_match.append(matched_Lemma)
+                        POS_match = []
+                        Lemma_match = []
+                        for Lemma_POS_x in Lemma_POS:
+                            #print("Lemma_POS_x: ", Lemma_POS_x)
+
+                            #"""
+                            try:
+                                temp_POS = re.findall('(\/[A-Z_+]+)', Lemma_POS_x)[0]
+                                matched_POS = temp_POS[1:]
+                                # findall은 리스트로 리턴하기 때문에 [0]
+                                # 맨 앞의 / 는 제외하려고 [1:]
+                                #print("matched_POS: ", matched_POS)
+                            except IndexError as e:
+                                print(e, "\n", "Line", line_counter, "contains errors at")
+                                print(Lemma_POS, line[:-1])
+                                print(bucket)
+                                print(bucket[1], bucket[2])
+                                print('compressed_bucket:', compressed_bucket)
+                                error_sentence = True
+
+                            matched_Lemma = Lemma_POS_x.replace(temp_POS, '')
+                            #print("matched_Lemma: ", matched_Lemma)
+
+                            POS_match.append(matched_POS)
+                            Lemma_match.append(matched_Lemma)
 
                     """
                     INPUT
@@ -221,8 +226,8 @@ for corpus_type in corpus_list:
                         eoj_pos_list.append(lemma_dict['POS'])
                         eoj_form_list.append(lemma_dict['FORM'])
                         
-                    # for eoj_inner_id_counter, lemma_dict in enumerate(line_list):
-                        # print(eoj_inner_id_counter, lemma_dict)
+                    #for eoj_inner_id_counter, lemma_dict in enumerate(line_list):
+                    #    print(eoj_inner_id_counter, lemma_dict)
                         
                     #print("원래 어절: ", bucket[1]) # 어절
                     #print('eoj_deprel: ', eoj_deprel)

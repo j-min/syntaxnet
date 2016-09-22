@@ -24,6 +24,9 @@ def compress_eoj(FORM, LEMMA_POS):
     sniparrayOrigin = []
     posarray = []
 
+    if LEMMA_POS == ' + /SW':
+        return ' + /SW', 1
+
     snip_pairs = re.split(' \+ ', LEMMA_POS)  # +sign needs to be escaped in regex #던지/VV + 어/EC
     """
     snip_pairs
@@ -446,7 +449,7 @@ def eoj_find_inner_head(DEPREL, POS_List, num_lemma, FORM_List):
                         elif any(x in pos for x in ['EP', 'EF', 'EC', 'ETN', 'ETM', 'XSN', 'XSV', 'XSA', 'SF', 'JX']):
                             head_list[i] = i - 1
 
-        if (num_N_V == 0) or not (num_N_V == num_N) or not (num_N_V == num_V):
+        if (num_N_V == 0):
             root_is_specified = False
             print ('root is not specified')
             print (FORM_List)
@@ -473,11 +476,15 @@ def eoj_find_inner_head(DEPREL, POS_List, num_lemma, FORM_List):
         else:
             if num_N > 1:
                 # 체언이 2개 이상일 때 => 맨 끝에 위치한 체언이 root
+                # 용언과 섞여있으면 체언이 우선
 
                 where_Ns_are = [i for i, x in enumerate(head_list) if x == 'N']
                 # 체언들의 위치 출력
-
                 for i in where_Ns_are:
+                    head_list[i] = 'not_specified'
+                where_Vs_are = [i for i, x in enumerate(head_list) if x == 'V']
+                # 용언들의 위치 출력
+                for i in where_Vs_are:
                     head_list[i] = 'not_specified'
                 where_root_is = max(where_Ns_are)
                 head_list[where_root_is] = 0
@@ -576,11 +583,11 @@ def eoj_find_inner_head(DEPREL, POS_List, num_lemma, FORM_List):
                     head_list[i] = where_root_is
             root_is_specified = True
 
-        elif not (num_N_V == num_N) and not (num_N_V == num_V):
-            root_is_specified = False
-            print ('root is not specified')
-            print (FORM_List)
-            print (POS_List)
+        #elif not (num_N_V == num_N) and not (num_N_V == num_V):
+        #    root_is_specified = False
+        #    print ('root is not specified')
+        #    print (FORM_List)
+        #    print (POS_List)
 
 
         elif num_N_V == 1:
@@ -604,11 +611,15 @@ def eoj_find_inner_head(DEPREL, POS_List, num_lemma, FORM_List):
         else:
             if num_N > 1:
                 # 체언이 2개 이상일 때 => 맨 끝에 위치한 체언이 root
+                # 용언과 섞여있으면 체언이 우선
 
                 where_Ns_are = [i for i, x in enumerate(head_list) if x == 'N']
                 # 체언들의 위치 출력
-
                 for i in where_Ns_are:
+                    head_list[i] = 'not_specified'
+                where_Vs_are = [i for i, x in enumerate(head_list) if x == 'V']
+                # 용언들의 위치 출력
+                for i in where_Vs_are:
                     head_list[i] = 'not_specified'
                 where_root_is = max(where_Ns_are)
                 head_list[where_root_is] = 0
