@@ -125,42 +125,45 @@ for corpus_type in corpus_list:
                     compressed_bucket, num_lemma = compress_eoj(bucket[1], bucket[2])
                     #print("compressed_bucket: ", compressed_bucket)
 
+                    """
                     if compressed_bucket == ' + /SW':
                         POS_math = ['SW']
                         Lemma_match = [' + ']
+
                     else:
-                        Lemma_POS = re.split(' \+ ', compressed_bucket)
-                        #POS_Lemma = re.split('[ +]+', bucket[2])
-                        #print("Lemma_POS: "+str(Lemma_POS))
-                        #print("Line: ", line_counter, Lemma_POS)
-
-                        POS_match = []
-                        Lemma_match = []
-                        for Lemma_POS_x in Lemma_POS:
-                            #print("Lemma_POS_x: ", Lemma_POS_x)
-
-                            #"""
-                            try:
-                                temp_POS = re.findall('(\/[A-Z_+]+)', Lemma_POS_x)[0]
-                                matched_POS = temp_POS[1:]
-                                # findall은 리스트로 리턴하기 때문에 [0]
-                                # 맨 앞의 / 는 제외하려고 [1:]
-                                #print("matched_POS: ", matched_POS)
-                            except IndexError as e:
-                                print(e, "\n", "Line", line_counter, "contains errors at")
-                                print(Lemma_POS, line[:-1])
-                                print(bucket)
-                                print(bucket[1], bucket[2])
-                                print('compressed_bucket:', compressed_bucket)
-                                error_sentence = True
-
-                            matched_Lemma = Lemma_POS_x.replace(temp_POS, '')
-                            #print("matched_Lemma: ", matched_Lemma)
-
-                            POS_match.append(matched_POS)
-                            Lemma_match.append(matched_Lemma)
-
                     """
+                    Lemma_POS = re.split(' \+ ', compressed_bucket)
+                    #POS_Lemma = re.split('[ +]+', bucket[2])
+                    #print("Lemma_POS: "+str(Lemma_POS))
+                    #print("Line: ", line_counter, Lemma_POS)
+
+                    POS_match = []
+                    Lemma_match = []
+                    for Lemma_POS_x in Lemma_POS:
+                        #print("Lemma_POS_x: ", Lemma_POS_x)
+
+                        #"""
+                        try:
+                            temp_POS = re.findall('(\/[A-Z_+]+)', Lemma_POS_x)[0]
+                            matched_POS = temp_POS[1:]
+                            # findall은 리스트로 리턴하기 때문에 [0]
+                            # 맨 앞의 / 는 제외하려고 [1:]
+                            #print("matched_POS: ", matched_POS)
+                        except IndexError as e:
+                            print(e, "\n", "Line", line_counter, "contains errors at")
+                            print(Lemma_POS, line[:-1])
+                            print(bucket)
+                            print(bucket[1], bucket[2])
+                            print('compressed_bucket:', compressed_bucket)
+                            error_sentence = True
+
+                        matched_Lemma = Lemma_POS_x.replace(temp_POS, '')
+                        #print("matched_Lemma: ", matched_Lemma)
+
+                        POS_match.append(matched_POS)
+                        Lemma_match.append(matched_Lemma)
+
+                """
                     INPUT
                     ex)
                     0    1                   2                                                   3              4
