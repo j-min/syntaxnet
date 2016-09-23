@@ -18,7 +18,7 @@ corpus_list = ['training', 'tuning', 'test']
 for corpus_type in corpus_list:
     corpus = directory + corpus_type
     with codecs.open(corpus, 'r') as readfile:
-        OUT_FILENAME = os.path.abspath(os.path.join(os.getcwd(), os.pardir)) +                                     '/models_sejong_conll/deptree_v2_' + corpus_type+'.conllu'
+        OUT_FILENAME = os.path.abspath(os.path.join(os.getcwd(), os.pardir)) +                                     '/models_sejong_conll/sejong_' + corpus_type+'.conllu'
 
         sentence = []
         error_sentence = False
