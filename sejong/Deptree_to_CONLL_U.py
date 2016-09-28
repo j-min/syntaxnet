@@ -163,7 +163,7 @@ for corpus_type in corpus_list:
                         POS_match.append(matched_POS)
                         Lemma_match.append(matched_Lemma)
 
-                """
+                    """
                     INPUT
                     ex)
                     0    1                   2                                                   3              4

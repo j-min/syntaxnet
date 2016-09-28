@@ -10,7 +10,7 @@ def compress_eoj(FORM, LEMMA_POS):
 
     OUTPUT:
     Compressed_LEMMA_POS: '수영/NNG + 할/XSV+ETM'
-
+    num_lemma: 2
     """
 
     """
@@ -59,7 +59,7 @@ def compress_eoj(FORM, LEMMA_POS):
     word = '도수안경의'
     """
 
-    # print (snip_pairs_2d)
+    #print (snip_pairs_2d)
     # print (word)
 
     buffer_start = 0
@@ -189,7 +189,7 @@ def compress_eoj(FORM, LEMMA_POS):
                 # Add buffer
                 posbuffer.append(snip_pair[1])
 
-                word_counter += 1
+                #word_counter += 1
 
         if end_of_sequence == True:
             continue
@@ -576,6 +576,8 @@ def eoj_find_inner_head(DEPREL, POS_List, num_lemma, FORM_List):
             try:
                 where_root_is = POS_List.index('MAG')
             except:
+                #print(FORM_List)
+                #print(head_list)
                 where_root_is = POS_List.index('MAJ')
             head_list[where_root_is] = 0
             for i, pos in enumerate(head_list):
